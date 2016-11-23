@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue.JS Tutorial</title>
+    <title>Vue.JS Tutorial | Looping with V-for Directive</title>
 
     <link rel="stylesheet" href="../_bootstrap/bootstrap.min.js">
 
@@ -17,6 +17,12 @@
   <body>
     <div id="app">
           <h1>{{message}}</h1>
+
+          <ul>
+            <li style="list-style-type:none" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li><br>
+            <li style="list-style-type:none" v-for="count in count">Loop This {{count}}</li>
+          </ul>
+
     </div>
   </body>
 
@@ -25,7 +31,13 @@
       var app = new Vue({
         el: '#app',
         data: {
-          message: 'Hello Vue World'
+          message: 'Hello Vue World',
+          todos: [
+            {text: 'Learn Vue', id:1},
+            {text: 'Like the video', id:2},
+            {text: 'Subscribe to devmarketer', id:3}
+          ],
+          count: 10
         }
       })
     </script>
