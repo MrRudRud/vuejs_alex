@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue.JS Tutorial | Directive </title>
+
+    <link rel="stylesheet" href="../_bootstrap/bootstrap.min.js">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      div[v-cloak]{
+        background-color: red;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="app">
+
+       <h1 v-text="message"></h1>
+
+       <h1 v-pre>{{message}}  | v-pre, render nothing inside element</h1>
+
+       <h1 v-once>{{message}} | v-once, only rendering value one time</h1>
+
+       <h1 v-cloak>{{message}} | v-cloak, rending in the fastest ways with out showing curly bracket </h1>
+
+       <h1 v-html="intro"></h1>
+
+       <h1 v-show="viewed">You have viewed this text | v-show with value true/false</h1>
+
+       <h1 v-if="viewed">You have viewed this text | v-if </h1>
+       <h1 v-else>You have NOT viewed this text | v-else </h1>
+
+    </div>
+  </body>
+
+    <script src="../_vue/vue.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue World',
+          intro: "Welcome to the tutorial <small> it is all about Vue.js</small>",
+          viewed: false
+        }
+      })
+    </script>
+
+</html>
