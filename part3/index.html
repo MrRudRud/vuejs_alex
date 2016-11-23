@@ -16,7 +16,7 @@
 
   <body>
     <div id="app">
-          <h1>{{message}}</h1>
+          <h1 v-html="intro"></h1>
     </div>
   </body>
 
@@ -25,7 +25,8 @@
       var app = new Vue({
         el: '#app',
         data: {
-          message: 'Hello Vue World'
+          message: 'Hello Vue World',
+          intro: "WElcome to the tutorial <small> it is all about Vue.js</small>"
         }
       })
     </script>
